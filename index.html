@@ -4,143 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Source Engine L4D & L4D2</title>
+  <link rel="stylesheet" href="estilos.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #111;
-      color: #fff;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background: linear-gradient(90deg, #222, #444);
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1rem;
-    }
-
-    nav a {
-      color: #fff;
-      font-size: 1.5rem;
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    nav a:hover {
-      background: #00bcd4;
-      color: #111;
-    }
-
-    section {
-      padding: 2rem;
-      text-align: center;
-    }
-
-    h2 {
-      margin-bottom: 1rem;
-      font-size: 2rem;
-      color: #00bcd4;
-    }
-
-    .carousel-container {
-      display: flex;
-      justify-content: space-between;
-      gap: 2rem;
-    }
-
-    .slick-carousel {
-      width: 45%;
-      margin: 0 auto;
-    }
-
-    .game-card {
-      background: #333;
-      padding: 1rem;
-      border-radius: 8px;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-    
-    .video-container {
-      position: relative;
-      width: 100%;
-      padding-bottom: 56.25%;
-      overflow: hidden;
-      border-radius: 8px;
-    }
-
-    .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #222;
-      color: #aaa;
-      margin-top: 2rem;
-    }
-
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      nav ul {
-        flex-direction: column;
-        gap: 0.5rem;
-      }
-
-      .carousel-container {
-        flex-direction: column;
-      }
-
-      .slick-carousel {
-        width: 100%;
-      }
-    }
-
-  </style>
-
 </head>
 
 <body>
   <header>
-    <div class="logo">🎮 ¡Bienvenido a Modding Spanish!</div>
+    <div class="logo">🎮 Bienvenido a Modding L4D & L4D2</div>
     <nav>
       <ul>
         <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
@@ -230,26 +104,42 @@
         </div>
       </div>
     </section>
+
+    <section>
+      <h2>Herramientas para Programas</h2>
+      <div class="carousel-tools">
+        <div class="tool-card">
+          <a href="https://developer.valvesoftware.com/wiki/Crowbar" target="_blank">
+            <img src="https://valvedev.info/tools/crowbar/thumb.png" alt="Crowbar" />
+          </a>
+          <h3>Crowbar</h3>
+        </div>
+        <div class="tool-card">
+          <a href="https://developer.valvesoftware.com/wiki/GCFScape" target="_blank">
+            <img src="https://valvedev.info/tools/gcfscape/thumb.png" alt="GCFScape" />
+          </a>
+          <h3>GCFScape</h3>
+        </div>
+        <div class="tool-card">
+          <a href="https://developer.valvesoftware.com/wiki/VTFEdit" target="_blank">
+            <img src="https://valvedev.info/tools/vtfedit/thumb.png" alt="VTFEdit" />
+          </a>
+          <h3>VTFEdit</h3>
+        </div>
+        <div class="tool-card">
+          <a href="https://developer.valvesoftware.com/wiki/Source_Model_Skin_Editor" target="_blank">
+            <img src="https://developer.valvesoftware.com/w/images/a/ad/Skins_small.png" alt="VTFEdit" />
+          </a>
+          <h3>Source Model Skin Editor</h3>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <p>© 2025 GamingZone. Todos los derechos reservados.</p>
+    <p>© 2025 Joshe Gatito. Todos los derechos reservados.</p>
   </footer>
 
-  <script>
-    $(document).ready(function(){
-      $('.slick-carousel').slick({
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        speed: 500,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        arrows: true,
-        dots: true
-      });
-    });
-  </script>
-
+  <script src="modding.js"></script>
 </body>
 </html>
