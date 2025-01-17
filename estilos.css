@@ -28,6 +28,15 @@ header {
   z-index: 10;
 }
 
+/* Estilos base del menú hamburguesa */
+.menu-btn {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+  z-index: 100;
+}
+
 .nav {
   display: flex;
 }
@@ -297,35 +306,55 @@ header {
       flex-direction: column;
       gap: 20px;
   }
-
+  
   .nav {
       flex-direction: column;
       align-items: center;
       gap: 15px;
+      order: 3; /* Movemos la navegación después de la búsqueda */
   }
 
   .search {
-      width: 100%;
+      width: 60%;
+      margin-top: 10px; /* Espacio después del logo */
+      order: 2; /* Posicionamos la búsqueda después del logo */
   }
 
   .banner {
-      padding: 120px 20px 50px;
+      padding: 200px 20px 50px; /* Aumentamos el padding superior */
       flex-direction: column;
+      justify-content: flex-start; /* Alineamos el contenido desde arriba */
   }
 
   .content {
       text-align: center;
+      margin-top: 100px; /* Espacio después del header */
       margin-bottom: 30px;
+      order: 1; /* Aseguramos que el contenido va primero */
   }
 
   .banner .content h4 {
       font-size: 24px;
+      margin-top: 0; /* Resetear margen superior */
+      margin-bottom: 25px; /* Espacio antes del párrafo */
+  }
+
+  .banner .content p {
+      margin-top: 0;
+      margin-bottom: 30px;
+      line-height: 1.6; /* Mejoramos la legibilidad */
+  }
+
+  .banner .content .button {
+      margin-bottom: 40px; /* Espacio antes del carrusel */
   }
 
   .carousel-box {
       min-width: unset;
       width: 100%;
-      padding: 10px;
+      padding: 15px;
+      margin-top: 20px;
+      order: 2; /* El carrusel va después del contenido */
   }
 
   .carousel {
@@ -345,7 +374,8 @@ header {
       bottom: 0;
       left: 0;
       justify-content: center;
-      margin-top: 20px;
+      margin-top: 30px;
+      order: 3;
   }
 
   .sci {
@@ -354,6 +384,13 @@ header {
       right: 0;
       justify-content: center;
       margin-top: 20px;
+      padding-bottom: 30px;
+      order: 4;
+  }
+
+  /* Ajustamos el z-index para asegurar que el contenido no se superponga */
+  .banner::before {
+      z-index: -1;
   }
 }
 
@@ -361,6 +398,7 @@ header {
 @media screen and (min-width: 401px) and (max-width: 720px) {
   header {
       padding: 20px;
+      background: rgba(0, 0, 0, 0.7);
   }
 
   .nav {
@@ -372,12 +410,13 @@ header {
   }
 
   .banner {
-      padding: 100px 20px;
+      padding: 150px 20px;
       flex-direction: column;
   }
 
   .content {
       text-align: center;
+      margin-top: 50px;
       margin-bottom: 40px;
   }
 
@@ -456,4 +495,3 @@ header {
       max-width: 285px;
   }
 }
-
