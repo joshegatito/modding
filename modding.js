@@ -1,35 +1,39 @@
-$(document).ready(function(){
-    $('.slick-carousel').slick({
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        speed: 500,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        arrows: true,
-        dots: true
+const trailer = document.querySelector('.trailer');
+const closeBtn = document.querySelector('.close');
+const iframe = document.getElementById('youtube-video');
+const carouselItems = document.querySelectorAll('.carousel-item');
+const btnTrailer = document.querySelector('.button');
+const btnPlay = document.querySelector('.play'); 
+
+let selectedVideoId = null;
+
+// Función para seleccionar el video al hacer clic en una imagen del carrusel
+carouselItems.forEach(item => {
+    item.addEventListener('click', () => {
+        selectedVideoId = item.getAttribute('data-video-id');
     });
 });
 
-$(document).ready(function(){
-    $('.carousel-tools').slick({
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      speed: 500,
-      autoplay: true,
-      autoplaySpeed: 2000,
-      arrows: true,
-      dots: true,
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-          }
-        }
-      ]
-    });
+// Reproducir video desde el carrusel
+btnTrailer.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (selectedVideoId) {
+        trailer.classList.add('active');
+        iframe.src = `https://www.youtube.com/embed/${selectedVideoId}?autoplay=1`;
+    } else {
+        alert("Por favor, selecciona una imagen del carrusel primero.");
+    }
 });
-  
+
+// Reproducir el trailer con un video específico
+btnPlay.addEventListener('click', (e) => {
+    e.preventDefault();
+    trailer.classList.add('active');
+    iframe.src = "https://www.youtube.com/embed/SvzjTbBCZTI?autoplay=1";
+});
+
+// Función para cerrar el video y detener la reproducción
+closeBtn.addEventListener('click', () => {
+    trailer.classList.remove('active');
+    iframe.src = "";
+});
