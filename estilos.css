@@ -271,6 +271,31 @@ header {
 
 /* Responsividad */
 @media (max-width: 768px) {
+  body {
+    font-size: 14px; /* Ajustar tamaño de fuente para pantallas pequeñas */
+  }
+
+  header {
+    padding: 20px 30px; /* Menos espacio para header en móviles */
+  }
+
+  .nav {
+    flex-direction: column; /* Navegación en columna para pantallas pequeñas */
+    align-items: center;
+  }
+
+  .nav li {
+    margin: 5px 0; /* Espaciado entre los elementos de la navegación */
+  }
+
+  .search {
+    width: 100%; /* Buscar ocupa el 100% del ancho */
+  }
+
+  .search input {
+    padding-left: 15px;
+  }
+
   .banner {
     flex-direction: column;
     padding: 0 20px;
@@ -297,4 +322,17 @@ header {
   .banner .content p {
     font-size: 0.9em;
   }
+
+  .play {
+    font-size: 1em; /* Ajustar tamaño del texto de 'play' en pantallas pequeñas */
+  }
+
+  .sci a {
+    font-size: 20px; /* Ajustar tamaño de iconos sociales en móviles */
+  }
+
+  .trailer video {
+    max-width: 100%; /* Hacer que el video ocupe el 100% del ancho */
+  }
 }
+
