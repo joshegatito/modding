@@ -54,7 +54,7 @@ header {
   position: relative;
   width: 300px;
   height: 40px;
-  margin-top: 10px; /* Mueva la barra de búsqueda hacia abajo */
+  margin-top: 10px;
 }
 
 .search input {
@@ -261,7 +261,7 @@ header {
   width: 100%;
   height: 100%;
   max-width: 900px;
-  aspect-ratio: 16 / 9; /* Proporción estándar de video de YouTube */
+  aspect-ratio: 16 / 9;
   border: none;
 }
 
@@ -277,83 +277,20 @@ header {
 .responsive-video {
   position: relative;
   width: 100%;
-  max-width: 900px; /* Tamaño máximo para pantallas grandes */
-  margin: 0 auto; /* Centrado horizontal */
-  aspect-ratio: 16 / 9; /* Proporción estándar de video */
+  max-width: 900px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
 }
 
 .responsive-video iframe {
   width: 100%;
   height: 100%;
-  border: none; /* Elimina bordes si están configurados */
+  border: none;
 }
 
 
 /* Responsividad */
-@media (max-width: 600px) {
-  header {
-    padding: 20px 50px;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5px;
-  }
-
-  /* Muestra la búsqueda debajo de los elementos de navegación en dispositivos móviles */
-  header .nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .search {
-    order: 2; /* Ponla debajo de 'nav' */
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  .search input {
-    width: calc(100% - 20px);
-  }
-
-  .content p {
-    font-size: 0.8em;
-  }
-
-  .button a {
-    padding: 5px 15px;
-  }
-
-  .carousel-box {
-    min-width: 100%;
-    margin-top: 20px;
-  }
-
-  .sci, .play {
-    position: relative;
-    bottom: auto;
-    top: auto;
-    left: auto;
-    right: auto;
-    margin-top: 20px;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* Ajustar el video en dispositivos pequeños */
-  .responsive-video {
-    width: 100%;
-    max-width: 100%; /* No exceder el 100% del contenedor */
-    aspect-ratio: 16 / 9; /* Mantener la proporción del video */
-  }
-
-  .responsive-video iframe {
-    width: 100%;
-    height: 100%;
-  }
-}
-
-/* Para dispositivos con un ancho máximo de 768px */
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
   header {
     padding: 20px 30px;
     flex-direction: column;
@@ -395,3 +332,4 @@ header {
     max-width: 250px;
   }
 }
+
