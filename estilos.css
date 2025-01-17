@@ -290,7 +290,8 @@ header {
 
 
 /* Responsividad */
-@media (max-width: 768px) {
+@media (max-width: 1612px) and (max-height: 720px) {
+  /* Estilos para el Honor X7 */
   header {
     padding: 20px 30px;
     flex-direction: column;
