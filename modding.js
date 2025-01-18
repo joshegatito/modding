@@ -37,3 +37,23 @@ closeBtn.addEventListener('click', () => {
     trailer.classList.remove('active');
     iframe.src = "";
 });
+
+// Agregar al final de tu archivo modding.js
+const menuBtn = document.querySelector('.menu-btn');
+const nav = document.querySelector('.nav');
+
+menuBtn.addEventListener('click', () => {
+    nav.classList.toggle('active');
+});
+
+// Cerrar menú al hacer clic en un enlace
+document.querySelectorAll('.nav li a').forEach(link => {
+    link.addEventListener('click', () => {
+        nav.classList.remove('active');
+    });
+});
+
+// Cerrar menú al hacer scroll
+window.addEventListener('scroll', () => {
+    nav.classList.remove('active');
+});
