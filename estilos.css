@@ -271,7 +271,45 @@ header {
   cursor: pointer;
 }
 
-/* Media Queries */
+/* video del trailer */
+.trailer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(20px);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.trailer.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.trailer iframe {
+  max-width: 900px;
+  width: 90%;
+  aspect-ratio: 16 / 9;
+  border: none;
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  filter: invert(1);
+  max-width: 30px;
+}
+
+/* responsivo para dispositvos moviles */
 @media screen and (max-width: 1024px) {
   header {
     padding: 20px 50px;
@@ -375,42 +413,4 @@ header {
     padding: 5px 15px;
     font-size: 14px;
   }
-}
-
-/* Trailer */
-.trailer {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 100;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  backdrop-filter: blur(20px);
-  visibility: hidden;
-  opacity: 0;
-}
-
-.trailer.active {
-  visibility: visible;
-  opacity: 1;
-}
-
-.trailer iframe {
-  max-width: 900px;
-  width: 90%;
-  aspect-ratio: 16 / 9;
-  border: none;
-}
-
-.close {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  cursor: pointer;
-  filter: invert(1);
-  max-width: 30px;
 }
