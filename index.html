@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,19 +50,34 @@
         <div class="carousel-box">
             <div class="carousel">
                 <div class="carousel-item" data-video-id="TS0SsxY4Rx4">
-                    <img src="./images/movies/modding-decompile.jpg" alt="Modding Decompile">
+                    <img src="./images/movies/modding-decompile.jpg" alt="">
                 </div>
                 <div class="carousel-item" data-video-id="VkTwyhjfYqs">
-                    <img src="./images/movies/modding-porting.jpg" alt="Modding Porting">
+                    <img src="./images/movies/modding-porting.jpg" alt="">
                 </div>
                 <div class="carousel-item" data-video-id="NxmCzkQBXrc">
-                    <img src="./images/movies/modding-collision.jpg" alt="Modding Collision">
+                    <img src="./images/movies/modding-collision.jpg" alt="">
                 </div>
                 <div class="carousel-item" data-video-id="PYVnm5zeVaQ">
-                    <img src="./images/movies/modding-compile.jpg" alt="Modding Compile">
+                    <img src="./images/movies/modding-compile.jpg" alt="">
                 </div>
                 <div class="carousel-item" data-video-id="ilqhtS5wqsA">
-                    <img src="./images/movies/modding-texture.jpg" alt="Modding Texture">
+                    <img src="./images/movies/modding-texture.jpg" alt="">
+                </div>
+                <div class="carousel-item" data-video-id="hYJh80F5R74">
+                    <img src="./images/movies/modding-proportion-trick-blender.jpg" alt="">
+                </div>
+                <div class="carousel-item" data-video-id="vpLAOLMB3jk">
+                    <img src="./images/movies/modding-include-models.jpg" alt="">
+                </div>
+                <div class="carousel-item" data-video-id="O8VmA1tYpUQ">
+                    <img src="./images/movies/modding-porting-max.jpg" alt="">
+                </div>
+                <div class="carousel-item" data-video-id="XPGYcG1CG78">
+                    <img src="./images/movies/modding-proportion-trick-max.jpg" alt="">
+                </div>
+                <div class="carousel-item" data-video-id="PwWVTdgB_ok">
+                    <img src="./images/movies/modding-poly-reduction.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -93,8 +108,10 @@
     <script src="./modding.js"></script>
     <script>
         $(document).ready(function(){
-            $('.carousel').carousel();
+          $('.carousel').carousel();
+          setInterval(function(){$('.carousel').carousel('next');}, 3000);
+          $('.carousel').css('cursor', 'pointer');
         });
-    </script>
+    </script>      
 </body>
 </html>

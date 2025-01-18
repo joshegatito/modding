@@ -100,9 +100,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: url(./images/movies/banner.jpeg) no-repeat;
+  background: url(./images/movies/banner.jpg) no-repeat;
   background-size: cover;
   background-position: center;
+  transition: background-image 0.5s ease-in-out;
 }
 
 .banner::before {
@@ -127,6 +128,7 @@ header {
 
 .movie-title {
   max-width: 250px;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .banner .content h4 {
