@@ -29,7 +29,7 @@ function nextimage() {
     }
 }
 
-setInterval(nextimage, 3000);
+setInterval(nextimage, 5000);
 
 const trailer = document.querySelector('.trailer');
 const closeBtn = document.querySelector('.close');
